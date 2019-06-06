@@ -11,16 +11,23 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-
+    @IBOutlet weak var vibrantMenuItem: NSMenuItem!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        
+        let menuItems = MenuViews.menuViews()
+        
+        menuItems.forEach{
+            $0.target = self
+            $0.action = #selector(menuItemAction(sender:))
+        }
+
+        vibrantMenuItem.submenu?.items = menuItems
     }
-
-    func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
+    
+    @objc func menuItemAction(sender: NSMenuItem) {
+        
     }
-
-
+    
 }
 

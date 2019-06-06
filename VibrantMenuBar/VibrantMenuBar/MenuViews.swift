@@ -7,3 +7,17 @@
 //
 
 import Cocoa
+
+class HighlightView: NSStackView {
+    
+    override func draw(_ dirtyRect: NSRect) {
+        guard enclosingMenuItem?.isHighlighted == true else {
+            super.draw(dirtyRect)
+            return
+        }
+        
+        NSColor.selectedMenuItemColor.set()
+        dirtyRect.fill()
+    }
+    
+}

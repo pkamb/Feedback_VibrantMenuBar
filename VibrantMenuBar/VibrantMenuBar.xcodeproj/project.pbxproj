@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5810673022A8B558007FE01A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5810672F22A8B558007FE01A /* AppDelegate.swift */; };
-		5810673222A8B558007FE01A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5810673122A8B558007FE01A /* ViewController.swift */; };
 		5810673422A8B559007FE01A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5810673322A8B559007FE01A /* Assets.xcassets */; };
 		5810673722A8B559007FE01A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5810673522A8B559007FE01A /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -16,7 +15,6 @@
 /* Begin PBXFileReference section */
 		5810672C22A8B558007FE01A /* VibrantMenuBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VibrantMenuBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5810672F22A8B558007FE01A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5810673122A8B558007FE01A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5810673322A8B559007FE01A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5810673622A8B559007FE01A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5810673822A8B559007FE01A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,7 +52,6 @@
 			isa = PBXGroup;
 			children = (
 				5810672F22A8B558007FE01A /* AppDelegate.swift */,
-				5810673122A8B558007FE01A /* ViewController.swift */,
 				5810673322A8B559007FE01A /* Assets.xcassets */,
 				5810673522A8B559007FE01A /* Main.storyboard */,
 				5810673822A8B559007FE01A /* Info.plist */,
@@ -133,7 +130,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5810673222A8B558007FE01A /* ViewController.swift in Sources */,
 				5810673022A8B558007FE01A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

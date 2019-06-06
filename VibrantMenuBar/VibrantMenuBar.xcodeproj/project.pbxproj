@@ -10,6 +10,7 @@
 		5810673022A8B558007FE01A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5810672F22A8B558007FE01A /* AppDelegate.swift */; };
 		5810673422A8B559007FE01A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5810673322A8B559007FE01A /* Assets.xcassets */; };
 		5810673722A8B559007FE01A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5810673522A8B559007FE01A /* Main.storyboard */; };
+		5810674422A8BAAB007FE01A /* MenuViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5810674322A8BAAB007FE01A /* MenuViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		5810673622A8B559007FE01A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5810673822A8B559007FE01A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5810673922A8B559007FE01A /* VibrantMenuBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VibrantMenuBar.entitlements; sourceTree = "<group>"; };
+		5810674322A8BAAB007FE01A /* MenuViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +54,9 @@
 			isa = PBXGroup;
 			children = (
 				5810672F22A8B558007FE01A /* AppDelegate.swift */,
-				5810673322A8B559007FE01A /* Assets.xcassets */,
+				5810674322A8BAAB007FE01A /* MenuViews.swift */,
 				5810673522A8B559007FE01A /* Main.storyboard */,
+				5810673322A8B559007FE01A /* Assets.xcassets */,
 				5810673822A8B559007FE01A /* Info.plist */,
 				5810673922A8B559007FE01A /* VibrantMenuBar.entitlements */,
 			);
@@ -131,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5810673022A8B558007FE01A /* AppDelegate.swift in Sources */,
+				5810674422A8BAAB007FE01A /* MenuViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -54,10 +54,10 @@
 		5810672E22A8B558007FE01A /* VibrantMenuBar */ = {
 			isa = PBXGroup;
 			children = (
-				5810674522A9CD53007FE01A /* VibrantMenuBar-Bridging-Header.h */,
 				5810672F22A8B558007FE01A /* AppDelegate.swift */,
 				5810674322A8BAAB007FE01A /* MenuViews.swift */,
 				5810673522A8B559007FE01A /* Main.storyboard */,
+				5810674522A9CD53007FE01A /* VibrantMenuBar-Bridging-Header.h */,
 				5810673322A8B559007FE01A /* Assets.xcassets */,
 				5810673822A8B559007FE01A /* Info.plist */,
 				5810673922A8B559007FE01A /* VibrantMenuBar.entitlements */,

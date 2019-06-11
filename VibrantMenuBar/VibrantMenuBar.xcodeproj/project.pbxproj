@@ -21,6 +21,7 @@
 		5810673822A8B559007FE01A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5810673922A8B559007FE01A /* VibrantMenuBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VibrantMenuBar.entitlements; sourceTree = "<group>"; };
 		5810674322A8BAAB007FE01A /* MenuViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViews.swift; sourceTree = "<group>"; };
+		5810674522A9CD53007FE01A /* VibrantMenuBar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VibrantMenuBar-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +54,7 @@
 		5810672E22A8B558007FE01A /* VibrantMenuBar */ = {
 			isa = PBXGroup;
 			children = (
+				5810674522A9CD53007FE01A /* VibrantMenuBar-Bridging-Header.h */,
 				5810672F22A8B558007FE01A /* AppDelegate.swift */,
 				5810674322A8BAAB007FE01A /* MenuViews.swift */,
 				5810673522A8B559007FE01A /* Main.storyboard */,
@@ -95,6 +97,7 @@
 				TargetAttributes = {
 					5810672B22A8B558007FE01A = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -271,6 +274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = VibrantMenuBar/VibrantMenuBar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -281,6 +285,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.feedback.VibrantMenuBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VibrantMenuBar/VibrantMenuBar-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -289,6 +295,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = VibrantMenuBar/VibrantMenuBar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -299,6 +306,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.feedback.VibrantMenuBar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VibrantMenuBar/VibrantMenuBar-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

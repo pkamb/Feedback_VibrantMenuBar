@@ -12,6 +12,7 @@ enum MenuViews: CaseIterable {
     
     static let menuItemFrame = NSRect(x: 0, y: 0, width: 300, height: 50)
     
+    case automaticallyHighlightMenuItems
     case disabledMenuItem
     case menuItem
     case customView
@@ -20,6 +21,7 @@ enum MenuViews: CaseIterable {
     
     var title: String {
         switch self {
+        case .automaticallyHighlightMenuItems: return "Automatically Highlight Menu Items"
         case .disabledMenuItem:   return "disabled NSMenuItem"
         case .menuItem:           return "enabled NSMenuItem"
         case .customView:         return "basic custom view"
@@ -32,6 +34,8 @@ enum MenuViews: CaseIterable {
         let menuItem: NSMenuItem
         
         switch self {
+        case .automaticallyHighlightMenuItems:
+            menuItem = NSMenuItem(title: title,  action: nil, keyEquivalent: "")
         case .disabledMenuItem:
             menuItem = NSMenuItem(title: title, action: nil, keyEquivalent: "")
             menuItem.isEnabled = false

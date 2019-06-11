@@ -29,8 +29,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func menuItemAction(sender: NSMenuItem) {
-        print("menuItemAction")
+        if sender.title == MenuViews.automaticallyHighlightMenuItems.title {
+            if sender.state == .off {
+                sender.state = .on
+            } else {
+                sender.state = .off
+            }
+        }
     }
     
 }
-

@@ -16,6 +16,7 @@ enum MenuViews: CaseIterable {
     case disabledMenuItem
     case customView
     case customViewDrawRect
+    case viewHandlesEvents
     
     func menuItem() -> NSMenuItem {
         let menuItem: NSMenuItem
@@ -38,6 +39,13 @@ enum MenuViews: CaseIterable {
             view.addArrangedSubview(label)
             menuItem = NSMenuItem()
             menuItem.view = view
+        case .viewHandlesEvents:
+            let label = NSTextField(labelWithString: "`_viewHandlesEvents = false` private API")
+            let view = NSStackView(frame: MenuViews.menuItemFrame)
+            view.addArrangedSubview(label)
+            menuItem = NSMenuItem()
+            menuItem.view = view
+            menuItem._viewHandlesEvents = false
         }
         
         return menuItem

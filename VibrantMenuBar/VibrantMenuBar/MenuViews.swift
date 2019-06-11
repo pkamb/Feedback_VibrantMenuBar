@@ -62,7 +62,31 @@ enum MenuViews: CaseIterable {
             menuItem._viewHandlesEvents = false
         }
         
+        if shouldAutomaticallyHighlight {
+            menuItem.tag = NSMenuItem.highlightTag
+        }
+        
         return menuItem
+    }
+    
+    
+    var shouldAutomaticallyHighlight: Bool {
+        switch self {
+        case .automaticallyHighlightMenuItems, .disabledMenuItem:
+            return false
+        default:
+            return true
+        }
+    }
+    
+}
+
+extension NSMenuItem {
+    
+    static var highlightTag = 44
+    
+    var shouldAutomaticallyHighlight: Bool {
+        return tag == NSMenuItem.highlightTag
     }
     
 }

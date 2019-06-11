@@ -12,8 +12,8 @@ enum MenuViews: CaseIterable {
     
     static let menuItemFrame = NSRect(x: 0, y: 0, width: 300, height: 50)
     
-    case menuItem
     case disabledMenuItem
+    case menuItem
     case customView
     case customViewDrawRect
     case viewHandlesEvents
@@ -22,11 +22,11 @@ enum MenuViews: CaseIterable {
         let menuItem: NSMenuItem
         
         switch self {
-        case .menuItem:
-            menuItem = NSMenuItem(title: "enabled NSMenuItem",  action: nil, keyEquivalent: "")
         case .disabledMenuItem:
             menuItem = NSMenuItem(title: "disabled NSMenuItem", action: nil, keyEquivalent: "")
             menuItem.isEnabled = false
+        case .menuItem:
+            menuItem = NSMenuItem(title: "enabled NSMenuItem",  action: nil, keyEquivalent: "")
         case .customView:
             let label = NSTextField(labelWithString: "basic custom view")
             let view = NSStackView(frame: MenuViews.menuItemFrame)

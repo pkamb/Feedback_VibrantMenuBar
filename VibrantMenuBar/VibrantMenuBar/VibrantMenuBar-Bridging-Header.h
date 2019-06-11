@@ -7,6 +7,5 @@
 @interface NSMenuItem ()
 
 @property (setter=_setViewHandlesEvents:) BOOL _viewHandlesEvents;
-@property (setter=_setViewIsDrawingOnly:) BOOL _viewIsDrawingOnly;
 
 @end

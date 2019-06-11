@@ -15,6 +15,7 @@ enum MenuViews: CaseIterable {
     case menuItem
     case disabledMenuItem
     case customView
+    case customViewDrawRect
     
     func menuItem() -> NSMenuItem {
         let menuItem: NSMenuItem
@@ -28,6 +29,12 @@ enum MenuViews: CaseIterable {
         case .customView:
             let label = NSTextField(labelWithString: "basic custom view")
             let view = NSStackView(frame: MenuViews.menuItemFrame)
+            view.addArrangedSubview(label)
+            menuItem = NSMenuItem()
+            menuItem.view = view
+        case .customViewDrawRect:
+            let label = NSTextField(labelWithString: "custom view + drawRect selection highlighting")
+            let view = HighlightView(frame: MenuViews.menuItemFrame)
             view.addArrangedSubview(label)
             menuItem = NSMenuItem()
             menuItem.view = view

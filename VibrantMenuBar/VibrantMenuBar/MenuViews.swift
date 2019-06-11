@@ -18,29 +18,39 @@ enum MenuViews: CaseIterable {
     case customViewDrawRect
     case viewHandlesEvents
     
+    var title: String {
+        switch self {
+        case .disabledMenuItem:   return "disabled NSMenuItem"
+        case .menuItem:           return "enabled NSMenuItem"
+        case .customView:         return "basic custom view"
+        case .customViewDrawRect: return "custom view + drawRect selection highlighting"
+        case .viewHandlesEvents:  return "`_viewHandlesEvents = false` private API"
+        }
+    }
+    
     func menuItem() -> NSMenuItem {
         let menuItem: NSMenuItem
         
         switch self {
         case .disabledMenuItem:
-            menuItem = NSMenuItem(title: "disabled NSMenuItem", action: nil, keyEquivalent: "")
+            menuItem = NSMenuItem(title: title, action: nil, keyEquivalent: "")
             menuItem.isEnabled = false
         case .menuItem:
-            menuItem = NSMenuItem(title: "enabled NSMenuItem",  action: nil, keyEquivalent: "")
+            menuItem = NSMenuItem(title: title,  action: nil, keyEquivalent: "")
         case .customView:
-            let label = NSTextField(labelWithString: "basic custom view")
+            let label = NSTextField(labelWithString: title)
             let view = NSStackView(frame: MenuViews.menuItemFrame)
             view.addArrangedSubview(label)
             menuItem = NSMenuItem()
             menuItem.view = view
         case .customViewDrawRect:
-            let label = NSTextField(labelWithString: "custom view + drawRect selection highlighting")
+            let label = NSTextField(labelWithString: title)
             let view = HighlightView(frame: MenuViews.menuItemFrame)
             view.addArrangedSubview(label)
             menuItem = NSMenuItem()
             menuItem.view = view
         case .viewHandlesEvents:
-            let label = NSTextField(labelWithString: "`_viewHandlesEvents = false` private API")
+            let label = NSTextField(labelWithString: title)
             let view = NSStackView(frame: MenuViews.menuItemFrame)
             view.addArrangedSubview(label)
             menuItem = NSMenuItem()

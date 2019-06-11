@@ -8,7 +8,24 @@
 
 import Cocoa
 
-struct MenuViews {
+enum MenuViews: CaseIterable {
+    
+    case menuItem
+    case disabledMenuItem
+    
+    func menuItem() -> NSMenuItem {
+        let menuItem: NSMenuItem
+        
+        switch self {
+        case .menuItem:
+            menuItem = NSMenuItem(title: "enabled NSMenuItem",  action: nil, keyEquivalent: "")
+        case .disabledMenuItem:
+            menuItem = NSMenuItem(title: "disabled NSMenuItem", action: nil, keyEquivalent: "")
+            menuItem.isEnabled = false
+        }
+        
+        return menuItem
+    }
     
     static func menuViews() -> [NSMenuItem] {
         

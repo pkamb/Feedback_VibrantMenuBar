@@ -15,7 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         
-        let menuItems = MenuViews.menuViews()
+        let menuItems = MenuViews.allCases.map({ $0.menuItem() })
         
         menuItems.forEach{
             $0.target = self

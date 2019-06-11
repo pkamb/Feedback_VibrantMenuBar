@@ -14,14 +14,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var vibrantMenuItem: NSMenuItem!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        
-        let menuItems = MenuViews.allCases.map({ $0.menuItem() })
-        
-        menuItems.forEach{
-            $0.target = self
-            $0.action = #selector(menuItemAction(sender:))
+        var menuItems = [NSMenuItem]()
+        for menuItem in MenuViews.allCases.map({ $0.menuItem() }) {
+            menuItem.target = self
+            menuItem.action = #selector(menuItemAction(sender:))
+            menuItems.append(menuItem)
+            menuItems.append(NSMenuItem.separator())
         }
-
         vibrantMenuItem.submenu?.items = menuItems
     }
     

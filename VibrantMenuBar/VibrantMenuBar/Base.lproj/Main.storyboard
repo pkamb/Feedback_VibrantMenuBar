@@ -338,7 +338,7 @@
                             </menuItem>
                             <menuItem title="Vibrant" id="Cun-Gf-VBB" userLabel="Vibrant">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Vibrant" id="1Hd-PY-y7e">
+                                <menu key="submenu" title="Vibrant" autoenablesItems="NO" id="1Hd-PY-y7e">
                                     <items>
                                         <menuItem title="VIBRANT" id="Cd8-pM-mZ9" userLabel="Vibrant">
                                             <modifierMask key="keyEquivalentModifierMask"/>

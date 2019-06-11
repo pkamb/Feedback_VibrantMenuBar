@@ -10,8 +10,11 @@ import Cocoa
 
 enum MenuViews: CaseIterable {
     
+    static let menuItemFrame = NSRect(x: 0, y: 0, width: 300, height: 50)
+    
     case menuItem
     case disabledMenuItem
+    case customView
     
     func menuItem() -> NSMenuItem {
         let menuItem: NSMenuItem
@@ -22,6 +25,12 @@ enum MenuViews: CaseIterable {
         case .disabledMenuItem:
             menuItem = NSMenuItem(title: "disabled NSMenuItem", action: nil, keyEquivalent: "")
             menuItem.isEnabled = false
+        case .customView:
+            let label = NSTextField(labelWithString: "basic custom view")
+            let view = NSStackView(frame: MenuViews.menuItemFrame)
+            view.addArrangedSubview(label)
+            menuItem = NSMenuItem()
+            menuItem.view = view
         }
         
         return menuItem

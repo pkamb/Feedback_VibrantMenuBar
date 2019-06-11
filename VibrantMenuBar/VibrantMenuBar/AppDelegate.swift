@@ -22,6 +22,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             menuItems.append(NSMenuItem.separator())
         }
         vibrantMenuItem.submenu?.items = menuItems
+        
+        for menuItem in menuItems {
+            vibrantMenuItem.submenu?.highlight(menuItem)
+        }
     }
     
     @objc func menuItemAction(sender: NSMenuItem) {

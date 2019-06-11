@@ -9,3 +9,9 @@
 @property (setter=_setViewHandlesEvents:) BOOL _viewHandlesEvents;
 
 @end
+
+@interface NSMenu ()
+
+- (void)highlightItem:(NSMenuItem*)menuItem;
+
+@end

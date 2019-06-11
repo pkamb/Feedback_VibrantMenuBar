@@ -26,7 +26,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @objc func menuItemAction(sender: NSMenuItem) {
-        
+        print("menuItemAction")
     }
     
 }
